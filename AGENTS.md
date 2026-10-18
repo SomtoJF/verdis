@@ -9,9 +9,9 @@ The reference company helps people check their eligibility to move abroad, then 
 - This Verdis demo exists to show the CEO how Ferno could fit the reference company's eligibility-to-report funnel.
 - Frontend-only Vite/React demo. No backend, real auth, real payments, or deployment work.
 - Sign-in/signup creates fake local demo identity only.
-- Ferno SDK instrumentation is intentionally deferred to a separate pass.
+- Ferno analytics is isolated in `src/analytics.ts`; keep payloads privacy-safe.
 - Keep unrelated links as `#` stubs.
 
-## Future instrumentation notes
+## Instrumentation notes
 
-Track behavior and outcomes, not form answers or payment details. Likely funnel events: opened checker, completed step, viewed results, opened checkout, attempted payment, payment succeeded, and payment failed.
+Track behavior and outcomes, not form answers or payment details. Funnel events include named eligibility steps, results, checkout, simulated payment outcomes, auth completion, and exit-intent survey lifecycle.
